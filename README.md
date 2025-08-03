@@ -2,7 +2,7 @@
 
 A multi-tenant event booking system built using Clean Architecture principles with ASP.NET Core 8, Entity Framework Core, and SQL Server.
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 This project follows **Clean Architecture** principles with clear separation of concerns across four layers:
 
