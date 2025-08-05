@@ -19,45 +19,91 @@ namespace CleanArch_Task.Api.Controllers
         [HttpGet]
         public IActionResult GetAllEvent()
         {
-            var events = service.GetAllEvent();
-            return Ok(events);
+            try
+            {
+                var events = service.GetAllEvent();
+                return Ok(events);
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("not created", ex);
+            }
+
         }
 
         [HttpGet("{id}")]
         public IActionResult GetEventById(int id)
         {
-            var eventDto = service.GetEventById(id);
-            if (eventDto == null) return NotFound($"Event with ID {id} not found.");
-            return Ok(eventDto);
+            try
+            {
+                var eventDto = service.GetEventById(id);
+                if (eventDto == null) return NotFound($"Event with ID {id} not found.");
+                return Ok(eventDto);
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("not created", ex);
+            }
+
         }
 
         [HttpPost]
         public IActionResult CreateEvent([FromForm] EventDTO eventDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-            var created = service.CreateEvent(eventDto);
-            return CreatedAtAction(nameof(GetEventById), new { id = created }, created);
+                var created = service.CreateEvent(eventDto);
+                return Created();
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("not created", ex);
+            }
+
+
         }
 
         [HttpPut("{id}")]
         public IActionResult UpdateEvent(int id, [FromForm] EventDTO eventDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-            var updated = service.UpdateEvent(id, eventDto);
-            if (updated == null) return NotFound($"Event with ID {id} not found.");
-            return Ok(updated);
+                var updated = service.UpdateEvent(id, eventDto);
+                if (updated == null) return NotFound($"Event with ID {id} not found.");
+                return Ok(updated);
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("not created", ex);
+            }
+
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteEvent(int id)
         {
-            var deleted = service.DeleteEvent(id);
-            if (!deleted) return NotFound($"Event with ID {id} not found.");
-            return NoContent();
+            try
+            {
+                var deleted = service.DeleteEvent(id);
+                if (!deleted) return NotFound($"Event with ID {id} not found.");
+                return NoContent();
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("not created", ex);
+            }
+
         }
     }
 }

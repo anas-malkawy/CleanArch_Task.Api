@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch_Task.Api", "CleanArch_Task.Api\CleanArch_Task.Api.csproj", "{75A76260-4B2F-4CC6-93D5-A63414D43819}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch_Task.Domain", "CleanArch_Task.Domain\CleanArch_Task.Domain.csproj", "{3BFAD437-1057-40E8-84F0-5C94C21694F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch_Task.Infrastructure", "CleanArch_Task.Infrastructure\CleanArch_Task.Infrastructure.csproj", "{24340D9E-E428-4937-A2A1-331C177F80C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch_Task", "CleanArch_Task\CleanArch_Task.csproj", "{EC432AC2-4748-4565-81D0-081134D3E68D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{24340D9E-E428-4937-A2A1-331C177F80C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24340D9E-E428-4937-A2A1-331C177F80C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24340D9E-E428-4937-A2A1-331C177F80C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC432AC2-4748-4565-81D0-081134D3E68D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC432AC2-4748-4565-81D0-081134D3E68D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC432AC2-4748-4565-81D0-081134D3E68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC432AC2-4748-4565-81D0-081134D3E68D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BE794F2-00A5-4712-B002-D2A2374ADEC2}
 	EndGlobalSection
 EndGlobal
